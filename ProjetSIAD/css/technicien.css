@@ -1,0 +1,116 @@
+/* Général */
+body {
+    background-image: url("../images/machine.png"); /* Chemin vers l'image de fond */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #fff; /* Couleur de texte pour une meilleure lisibilité sur le fond */
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #0e3641; /* Fond semi-transparent */
+    color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+/* Conteneur principal */
+.main-content {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Sections */
+section {
+    background-color: #57717ede; /* Fond semi-transparent */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 800px;
+}
+
+/* Tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #fff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #0e3641;
+}
+
+/* Boutons */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0e3641;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #57717e;
+}
+
+/* Barre latérale */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 2em;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 2;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #57717e;
+    transition: left 0.3s ease;
+    padding-top: 120px;
+    z-index: 1;
+}
+
+#menu-toggle:checked + .menu-icon + .sidebar {
+    left: 0;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar nav a:hover {
+    background-color: #0e3641;
+}
